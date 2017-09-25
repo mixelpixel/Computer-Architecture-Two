@@ -33,7 +33,18 @@ UDP
 
 ### Hard disks
 
-Two kinds: spinning platters and solid state
+Platter-based hard disks used to be a very interesting subject of research and discussion. Imagine ultra-smooth platters spinning 100 times per second, with binary data encoded on them in sections < 100 nanometers. The hard drive is the most space age piece of equipment in your home.
+
+You can learn about them here:
+[Engineer Guy Hard Drive](https://en.wikipedia.org/wiki/File:Harddrive-engineerguy.ogv)
+
+Platter based hard disks have an insane storage cost, less than $0.03 per gigabyte:
+
+[BackBlaze](https://www.backblaze.com/blog/hard-drive-cost-per-gigabyte/)
+
+SSDs are less interesting - they are just flash memory with a controller that engages your system's PCI bus.
+
+## Cyclic Redundancy Checking
 
 ### Graphics Accelerators
 
@@ -41,9 +52,15 @@ Dedicated graphics pipelines - hardware designed just for manipulating pixels in
 
 #### Shaders
 
+C++ software (gsl, actually) that executes simple mathematics on every vertex simultaneously.
+
 #### Pipeline components
 
+
+
 #### Software components
+
+OpenGL, DirectX, WebGL. CUDA, GLSL
 
 #### Onboard memory
 
