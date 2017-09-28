@@ -5,7 +5,9 @@
 - QUESTION: what is the relationship between seek time and read time?
 
 > average seek time = (9 + 90) / 2 => 49.5 milliseconds
+
 > block size in Bytes: 4 * 1024 = 4096 Bytes
+
 > block size in bits (presuming 8-bit bytes): 4096 * 8 = 32,768 bits
 
 - QUESTION: number of blocks to contain 100MB of data?
@@ -18,8 +20,11 @@
 
 - QUESTION: How long on average does it take to read 100MB of data?
 > 25,600 blocks * avg 49.5 milliseconds = 1,267,200 milliseconds
+
 > 1,267,200 milliseconds => 1,267.2 seconds / 60 => *21.12 MINUTES* of *seek* time.
+
 `((((100 * 1024 * 1024 * 8) / 32768) * 49.5) / 1000) / 60`
+
 > that seems like a long time. Still not sure about *read* time in addition to (?) seek time.
 
 2. Describe a TCP/IP packet in detail. Describe the header, how many bytes it is, and which components it contains. What data can come after the header?
