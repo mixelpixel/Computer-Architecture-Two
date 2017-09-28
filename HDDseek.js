@@ -48,3 +48,5 @@ const seek = () => {
 };
 /* 10. loop */
 const cycle = setInterval(seek, seekTime);
+
+// Q.E.F
