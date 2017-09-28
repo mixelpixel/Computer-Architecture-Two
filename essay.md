@@ -11,10 +11,13 @@
 > block size in bits (presuming 8-bit bytes): 4096 * 8 = 32,768 bits
 
 - QUESTION: number of blocks to contain 100MB of data?
-> 100MB * 1024 = 102,400KB * 1024 = 104,857,600B (* 8 = 838,860,800 bits)
-```console
-(100 * 1024 * 1024 * 8) / 32768
-> 25600
+> Number of bits: 100MB * 1024 = 102,400KB * 1024 = 104,857,600B (* 8 = 838,860,800 bits)
+
+> Number of blocks in 100MB = 838,860,800 bits (100MB) / 32,768 bits (block size)
+
+```js
+> (100 * 1024 * 1024 * 8) / 32768
+25600
 ```
 > ANSWER: 25,600 blocks
 
@@ -23,9 +26,14 @@
 
 > 1,267,200 milliseconds => 1,267.2 seconds / 60 => *21.12 MINUTES* of *seek* time.
 
-`((((100 * 1024 * 1024 * 8) / 32768) * 49.5) / 1000) / 60`
+```js
+> ((((100 * 1024 * 1024 * 8) / 32768) * 49.5) / 1000) / 60
+21.12
+```
 
 > that seems like a long time. Still not sure about *read* time in addition to (?) seek time.
+
+> *21 minutes and 5 seconds*
 
 2. Describe a TCP/IP packet in detail. Describe the header, how many bytes it is, and which components it contains. What data can come after the header?
 
