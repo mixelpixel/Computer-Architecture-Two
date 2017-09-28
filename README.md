@@ -14,6 +14,7 @@ Processor communicates asynchronously over network connection in order to satisf
 IP
 
 [Internet Protocol](https://en.wikipedia.org/wiki/Internet_Protocol)
+[Internet Protocol Suite](https://en.wikipedia.org/wiki/Internet_protocol_suite)
 
 TCP
 
