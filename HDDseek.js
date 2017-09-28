@@ -4,7 +4,8 @@ const process = require('process'); // <~~~ Not needed, just making linter happy
 
 /****************************************************************
 invoke: `$ node script [opt: dataSizeMB seekTime_ms blockSizeKB]`
-example `$ node HDDseek.js 5 9 4` <--- also default arguments
+example `$ node HDDseek.js 5 9 4` <--- also DEFAULT arguments
+Computer Architecture TWO example: `$ node HDDseek.js 100 9 4`
 ****************************************************************/
 
 /* 1. file size entered in Megabytes (defaults to 100MB) */
