@@ -8,7 +8,7 @@ example `$ node HDDseek.js 5 9 4` <--- also DEFAULT arguments
 Computer Architecture TWO example: `$ node HDDseek.js 100 9 4`
 ****************************************************************/
 
-/* 1. file size entered in Megabytes (defaults to 100MB) */
+/* 1. file size entered in Megabytes (defaults to 5MB) */
 const dataSizeMB = Number(process.argv[2]) || 5;
 /* 2. convert MB to KB */
 const dataSizeKB = dataSizeMB * 1024;
@@ -16,11 +16,11 @@ const dataSizeKB = dataSizeMB * 1024;
 const seekTime = Number(process.argv[3]) || 9;
 /* 4. HDD block size in KB (default 4KB) */
 const blockSize = Number(process.argv[4]) || 4;
-/* 5. Target number of blocks to seek which amount to file size */
+/* 5. Target number of blocks to seek which contain the data size */
 const target = dataSizeKB / blockSize;
-/* 6. total data sought in KB */
+/* 6. total ACTUAL data sought in KB */
 let data = 0;
-/* 7. total number of data blocks sought */
+/* 7. total number of ACTUAL data blocks sought */
 let blocks = 0;
 /* 8. program timer */
 const timeStart = process.hrtime();
