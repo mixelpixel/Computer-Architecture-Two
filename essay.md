@@ -2,7 +2,9 @@
 
 1. The minimum seek time for an HDD is 9msec, and the maximum seek time is 90msec. The block size of this HDD is 4KB. How long on average does it take to read 100MB of data?
 
-- QUESTION: what is the relationship between seek time and read time?
+QUESTION: what is the relationship between seek time and read time?
+
+Calculations in bits:
 
 > average seek time = (9 + 90) / 2 => 49.5 milliseconds
 
@@ -24,7 +26,7 @@
 - QUESTION: How long on average does it take to read 100MB of data?
 > 25,600 blocks * avg 49.5 milliseconds = 1,267,200 milliseconds
 
-> 1,267,200 milliseconds => 1,267.2 seconds / 60 => *21.12 MINUTES* of *seek* time.
+> 1,267,200 milliseconds => 1,267.2 seconds / 60 => *21.12 MINUTES* of *seek* time. **???**
 
 ```js
 > ((((100 * 1024 * 1024 * 8) / 32768) * 49.5) / 1000) / 60
@@ -34,6 +36,22 @@
 > that seems like a long time. Still not sure about *read* time in addition to (?) seek time.
 
 > *21 minutes and 5 seconds*
+
+> IF and ONLY IF each 4KB is NON-CONSECUTIVE
+
+:thinking_face:
+
+> I guess one way to figure an answer to *“How long on average does it take to read 100MB of data?“* would be to consider the average seek time for modern HDD’s (which per the wiki article seems more like in the range of 9ms) and then consider the range of cases where only one seek is needed when all the 4KB blocks are consecutive versus the number of seeks when *each and every* block is scattered about the disk…
+
+> Oh.. and I guess the 100MB isn’t necessarily for just one file… Considering that in all likelihood, that each of the files comprising the 100MB are likely to be consecutive, even if the files aren't... we'd have to figure a probability for how many files constitute the sum total 100MB...
+
+> In short, like @thomcom commented in the lecture, the answer is resolutely:
+
+> *“IT DEPENDS”*
+> --
+> --Thomson Comer
+
+:joy:
 
 2. Describe a TCP/IP packet in detail. Describe the header, how many bytes it is, and which components it contains. What data can come after the header?
 
