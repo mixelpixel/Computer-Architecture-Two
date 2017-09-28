@@ -59,6 +59,23 @@ In short, like @thomcom commented [in the lecture](https://youtu.be/_ivSbOPoJNk?
 
 :joy:
 
+> How long on average does it take to read 100MB of data?
+
+
+Well, we’ll also need to consider, how many files constitute the 100MB…
+Of those files, are they all written in consecutive blocks, or fragmented about the drive?
+
+Best case scenario, one consecutively blocked 100MB file would take 9ms for the read head to seek to, on a 7,200rpm drive, let’s say each 4KB block is x many nanometers long and the 7,200rpm takes so long to pass over each one and it takes some 25,600 4KB blocks to contain 100MB data, then
+
+`9ms + (25,600 * x-many nanoseconds)` = best case scenario….
+
+and worst case scenario is is all 25,600 blocks are fragmented, then…
+
+`(25,6000 * 9ms) + (25,600 * x-many nanoseconds)` = worst case scenario….
+
+Soooo…. an average case… welllllllll, if it takes me more than 20 seconds to copy a 100MB file from one place on my HDD to another, then it is time to upgrade :stuck_out_tongue:
+
+***
 2. Describe a TCP/IP packet in detail. Describe the header, how many bytes it is, and which components it contains. What data can come after the header?
 
 3. How does the network protocol guarantee that a TCP/IP packet is complete after transmission?
