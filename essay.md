@@ -51,7 +51,7 @@ I guess one way to figure an answer to *“How long on average does it take to r
 
 Oh.. and I guess the 100MB isn’t necessarily for just one file… Considering that in all likelihood, that each of the files comprising the 100MB are likely to be consecutive, even if the files aren't... we'd have to figure a probability for how many files constitute the sum total 100MB...
 
-In short, like @thomcom commented in the lecture, the answer is resolutely:
+In short, like @thomcom commented [in the lecture](https://youtu.be/_ivSbOPoJNk?=49m47s), the answer is resolutely:
 
 > *“IT DEPENDS”*
 > --
