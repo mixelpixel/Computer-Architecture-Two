@@ -7,45 +7,51 @@ QUESTION: what is the relationship between seek time and read time?
 Calculations in bits:
 
 > average seek time = (9 + 90) / 2 => 49.5 milliseconds
-
 > block size in Bytes: 4 * 1024 = 4096 Bytes
-
 > block size in bits (presuming 8-bit bytes): 4096 * 8 = 32,768 bits
 
-- QUESTION: number of blocks to contain 100MB of data?
+QUESTION: number of blocks to contain 100MB of data?
 > Number of bits: 100MB * 1024 = 102,400KB * 1024 = 104,857,600B (* 8 = 838,860,800 bits)
-
 > Number of blocks in 100MB = 838,860,800 bits (100MB) / 32,768 bits (block size)
-
 ```js
 > (100 * 1024 * 1024 * 8) / 32768
 25600
 ```
 > ANSWER: 25,600 blocks
 
-- QUESTION: How long on average does it take to read 100MB of data?
+QUESTION: How long on average does it take to read 100MB of data?
 > 25,600 blocks * avg 49.5 milliseconds = 1,267,200 milliseconds
-
 > 1,267,200 milliseconds => 1,267.2 seconds / 60 => *21.12 MINUTES* of *seek* time. **???**
-
 ```js
 > ((((100 * 1024 * 1024 * 8) / 32768) * 49.5) / 1000) / 60
 21.12
 ```
-
 > that seems like a long time. Still not sure about *read* time in addition to (?) seek time.
-
 > *21 minutes and 5 seconds*
-
-> IF and ONLY IF each 4KB is NON-CONSECUTIVE
+> ***IF and ONLY IF each 4KB is NON-CONSECUTIVE***
 
 :thinking_face:
 
-> I guess one way to figure an answer to *“How long on average does it take to read 100MB of data?“* would be to consider the average seek time for modern HDD’s (which per the wiki article seems more like in the range of 9ms) and then consider the range of cases where only one seek is needed when all the 4KB blocks are consecutive versus the number of seeks when *each and every* block is scattered about the disk…
+NOTE: ***IFF each 4KB block is NON-CONSECUTIVE && the AVERAGE seek time is 9ms***
+Use this [HDD seek simulator script](HDDseek.js) to analyze the simulate the theoretical boundary and comapre it to a practical test case
+> "In THEORY it only takes 230.4 seconds to seek 100MB of HDD data while
+> constrained to 4KB blocks and an average seek time of 9 milliseconds.
 
-> Oh.. and I guess the 100MB isn’t necessarily for just one file… Considering that in all likelihood, that each of the files comprising the 100MB are likely to be consecutive, even if the files aren't... we'd have to figure a probability for how many files constitute the sum total 100MB...
+> In PRACTICE, it took roughly 258.405510504 seconds. Yeah... 258.41. . .
+> Yeah, yeah, about 258. M-hmm...258.405510504 seconds. Yeah. 258. . . 258.4.
+> ...and 9 milliseconds per seek? Ah, 9. . . more like 10. 10.0939652540625 milliseconds.
+> Yeah, definitely 10.0939652540625 milliseconds, definitely per seek, 10.1 seconds.
 
-> In short, like @thomcom commented in the lecture, the answer is resolutely:
+> BAD BABY - HOT WATER!! BAD BABY - HOT WATER!!!!"
+
+> -- "Raymond Babbit" as played by Dustin Hoffman (1998, "Rain Man")
+
+NOTE:
+I guess one way to figure an answer to *“How long on average does it take to read 100MB of data?“* would be to consider the average seek time for modern HDD’s (which per the wiki article seems more like in the range of 9ms) and then consider the range of cases where only one seek is needed when all the 4KB blocks are consecutive versus the number of seeks when *each and every* block is scattered about the disk…
+
+Oh.. and I guess the 100MB isn’t necessarily for just one file… Considering that in all likelihood, that each of the files comprising the 100MB are likely to be consecutive, even if the files aren't... we'd have to figure a probability for how many files constitute the sum total 100MB...
+
+In short, like @thomcom commented in the lecture, the answer is resolutely:
 
 > *“IT DEPENDS”*
 > --
