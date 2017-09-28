@@ -35,12 +35,12 @@ const timeStart = process.hrtime();
 const seek = () => {
   if(data === dataSizeKB) {
     clearInterval(cycle);
-    console.log(`   "In theory it only takes ${blocks * seekTime / 1000} seconds to seek ${dataSizeMB}MB`);
-    console.log(`    of HDD data while seeking out ${blockSize}KB blocks at a time.\n`);
+    console.log(`   "In theory it only takes ${blocks * seekTime / 1000} seconds to seek ${dataSizeMB}MB of HDD data `);
+    console.log(`    while seeking out ${blockSize}KB blocks at a time and your seek time is ${seekTime} milliseconds.\n`);
     const timeEnd = process.hrtime(timeStart);
-    console.log(`    In practice, it took roughly ${timeEnd[0] + (timeEnd[1] / 1000000000)} seconds`);
-    console.log(`    Yeah, yeah, about ${timeEnd[0]}, ...${timeEnd[0] + (timeEnd[1] / 1000000000)} seconds. Yeah. ${timeEnd[0]}.`);
-    console.log('    ...\n    BAD BABY - HOT WATER!!!!!"');
+    console.log(`    In practice, it took roughly ${timeEnd[0] + (timeEnd[1] / 1000000000)} seconds. Yeah... ${(timeEnd[0] + (timeEnd[1] / 1000000000)).toFixed(2)}.`);
+    console.log(`    Yeah, yeah, about ${timeEnd[0]}, ...${timeEnd[0] + (timeEnd[1] / 1000000000)} seconds. Yeah. ${timeEnd[0]}. . .`);
+    console.log('    BAD BABY - HOT WATER!!!!!"\n');
     console.log('    -- "Raymond Babbit" as played by Dustin Hoffman (1998, "Rain Man")\n');
     return;
   }
