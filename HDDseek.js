@@ -26,16 +26,16 @@ let blocks = 0;
 const timeStart = process.hrtime();
 /* 9. HDD seek emulator */
 const seek = () => {
-  if(data === dataSizeKB) {
+  if(data >= dataSizeKB) {
     clearInterval(cycle);
     console.log(`\n   "In THEORY it only takes ${blocks * seekTime / 1000} seconds to seek ${dataSizeMB}MB of HDD data while`);
     console.log(`    constrained to ${blockSize}KB blocks and an average seek time of ${seekTime} milliseconds.\n`);
     const timeEnd = process.hrtime(timeStart);
     console.log(`    In PRACTICE, it took roughly ${timeEnd[0] + (timeEnd[1] / 1000000000)} seconds. Yeah... ${(timeEnd[0] + (timeEnd[1] / 1000000000)).toFixed(2)}. . .`);
-    console.log(`    Yeah, yeah, about ${timeEnd[0]}. M-hmm...${timeEnd[0] + (timeEnd[1] / 1000000000)} seconds. Yeah. ${timeEnd[0]}. . . ${(timeEnd[0] + (timeEnd[1] / 1000000000)).toFixed(1)}.`);
-    console.log(`    ...and ${seekTime} milliseconds per seek? Ah, ${seekTime}. . . more like ${(((timeEnd[0] + (timeEnd[1] / 1000000000)) / target) * 1000).toFixed(0)}. ${(((timeEnd[0] + (timeEnd[1] / 1000000000)) / target) * 1000)} milliseconds.`);
-    console.log(`    Yeah, definitely ${(((timeEnd[0] + (timeEnd[1] / 1000000000)) / target) * 1000)} milliseconds, definitely per seek, ${(((timeEnd[0] + (timeEnd[1] / 1000000000)) / target) * 1000).toFixed(1)} seconds.\n`);
-    console.log('\n    BAD BABY - HOT WATER!! BAD BABY - HOT WATER!!!!"\n');
+    console.log(`    Yeah, yeah, about ${timeEnd[0]}. M-hmm...${timeEnd[0] + (timeEnd[1] / 1000000000)} seconds. Yeah. ${timeEnd[0]}. . . ${(timeEnd[0] + (timeEnd[1] / 1000000000)).toFixed(1)}.\n`);
+    console.log(`    ...and ${seekTime} milliseconds per seek? Ah, ${seekTime}. . . maybe ${(((timeEnd[0] + (timeEnd[1] / 1000000000)) / target) * 1000).toFixed(0)}, no ${(((timeEnd[0] + (timeEnd[1] / 1000000000)) / target) * 1000)} milliseconds.`);
+    console.log(`    Yeah, definitely ${(((timeEnd[0] + (timeEnd[1] / 1000000000)) / target) * 1000)} milliseconds, definitely per seek, ${(((timeEnd[0] + (timeEnd[1] / 1000000000)) / target) * 1000).toFixed(1)} milliseconds.\n`);
+    console.log('    HOT WATER BURN BABY!! HOT WATER BURN BABY!!!!"\n');
     console.log('    -- "Raymond Babbit" as played by Dustin Hoffman (1998, "Rain Man")\n');
     return;
   }
