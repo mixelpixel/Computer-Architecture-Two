@@ -71,7 +71,7 @@ Best case scenario, one consecutively blocked 100MB file would take 9ms for the 
 
 and worst case scenario is is all 25,600 blocks are fragmented, then…
 
-`(25,6000 * 9ms) + (25,600 * x-many nanoseconds)` = worst case scenario….
+`(25,600 * 9ms) + (25,600 * x-many nanoseconds)` = worst case scenario….
 
 Soooo…. an average case… welllllllll, if it takes me more than 20 seconds to copy a 100MB file from one place on my HDD to another, then it is time to upgrade :stuck_out_tongue:
 
@@ -83,3 +83,9 @@ Soooo…. an average case… welllllllll, if it takes me more than 20 seconds to
 4. What is the difference between TCP and IP?
 
 5. Why is 3d performance so much higher with a graphics card than without? Modern CPUs are extremely fast, what is limiting their performance?
+
+
+cpu sends read request, time for request to be sent to HD controller
+HD controller wants to line up an optimal read path
+Is HD in stationary state? Is it spinning yet? Rotational latency
+benchmarks
