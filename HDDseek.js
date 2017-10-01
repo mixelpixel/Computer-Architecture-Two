@@ -1,7 +1,7 @@
 'use-strict';
 /* eslint no-console: 0 */
 const process = require('process'); // <~~~ Not needed, just making linter happy
-const logUpdate = require('log-update');
+const logUpdate = require('log-update'); // <~~~ require npm install
 
 /****************************************************************
 SCRIPT REQUIRES: `npm install log-update --save-dev`
@@ -61,7 +61,7 @@ const seek = () => {
     console.log('    -- "Raymond Babbit" as played by Dustin Hoffman (1998, "Rain Man")\n');
     return;
   }
-  // Some fudge
+  // Some fudge for an ultimately poor handling of minimal fragmentation simulation
   let blocksPerSeek;
   if (Number(fragmentation) < 1) {
     blocksPerSeek = dataSizeKB;
