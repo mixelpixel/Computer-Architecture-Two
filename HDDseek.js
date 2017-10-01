@@ -8,6 +8,10 @@ SCRIPT REQUIRES: `npm install log-update --save-dev`
 invoke: `$ node script [opt: dataSizeMB seekTime_ms blockSizeKB]`
 example `$ node HDDseek.js 5 9 4` <--- also DEFAULT arguments
 Computer Architecture TWO example: `$ node HDDseek.js 100 9 4`
+
+This simulation is contrained to EXCLUSIVELY emulating the
+HDD seek time - not including read time or transmission of
+data once read. For purposes of analysis.
 ****************************************************************/
 
 /* 1. file size entered in Megabytes (defaults to 5MB) */
