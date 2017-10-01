@@ -56,9 +56,9 @@ Both the Tansmission Control (TCP) and Internet (IP) protocols are aspects of th
 ***
 ## QUESTON: 5. Why is 3d performance so much higher with a graphics card than without? Modern CPUs are extremely fast, what is limiting their performance?
 
-Cuz 3d chips iz optimized for handling rgba matrix calculations
+Cuz 3d chips iz optimized for handling matrix calculations, whether for simple 3D modeling or complex lighting within a 3d environment, the graphics cards are optimized for matrix calculations including xyz axis and rgba rendering.
 
-CPU's is bzy handling the whole shebang.
+CPU's is bzy handling the whole shebang, so no matter how efficient, offloading graphics rendering - even just for a single monitor display - will grant the CPU less stress.
 
 ***
 *fin.*
