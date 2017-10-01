@@ -1,6 +1,6 @@
 # Assignment:
 
-QUESTON: 1. The minimum seek time for an HDD is 9msec, and the maximum seek time is 90msec. The block size of this HDD is 4KB. How long on average does it take to read 100MB of data?
+## QUESTON: 1. The minimum seek time for an HDD is 9msec, and the maximum seek time is 90msec. The block size of this HDD is 4KB. How long on average does it take to read 100MB of data?
 
 > One way to figure an answer to *“How long on average does it take to read 100MB of data?“* would be to consider the average seek time for modern HDD’s (which per the wiki article seems more like in the range of 9ms) and then consider the range of cases where only one seek is needed when all the 4KB blocks are consecutive versus the number of seeks when *each and every* block is scattered about the disk…
 
@@ -39,10 +39,16 @@ QUESTON: 1. The minimum seek time for an HDD is 9msec, and the maximum seek time
 > If you have never seen "Rain Man" (1988), then it probably isn't nearly as funny as I think it is.
 
 ***
-2. Describe a TCP/IP packet in detail. Describe the header, how many bytes it is, and which components it contains. What data can come after the header?
+## QUESTON: 2. Describe a TCP/IP packet in detail. Describe the header, how many bytes it is, and which components it contains. What data can come after the header?
 
-3. How does the network protocol guarantee that a TCP/IP packet is complete after transmission?
+***
+## QUESTON: 3. How does the network protocol guarantee that a TCP/IP packet is complete after transmission?
 
-4. What is the difference between TCP and IP?
+***
+## QUESTON: 4. What is the difference between TCP and IP?
 
-5. Why is 3d performance so much higher with a graphics card than without? Modern CPUs are extremely fast, what is limiting their performance?
+***
+## QUESTON: 5. Why is 3d performance so much higher with a graphics card than without? Modern CPUs are extremely fast, what is limiting their performance?
+
+***
+*fin.*
