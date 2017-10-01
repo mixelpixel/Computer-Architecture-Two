@@ -57,14 +57,11 @@ C++ software (gsl, actually) that executes simple mathematics on every vertex si
 
 #### Pipeline components
 
-
-
 #### Software components
 
 OpenGL, DirectX, WebGL. CUDA, GLSL
 
 #### Onboard memory
-
 
 # Assignment:
 
