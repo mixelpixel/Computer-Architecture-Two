@@ -56,7 +56,9 @@ Both the Tansmission Control (TCP) and Internet (IP) protocols are aspects of th
 ***
 ## QUESTON: 5. Why is 3d performance so much higher with a graphics card than without? Modern CPUs are extremely fast, what is limiting their performance?
 
+Cuz 3d chips iz optimized for handling rgba matrix calculations
 
+CPU's is bzy handling the whole shebang.
 
 ***
 *fin.*
