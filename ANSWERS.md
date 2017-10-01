@@ -36,7 +36,7 @@ This script requires the installation of the "log-update" npm package.
 
 `npm install log-update --save-dev`
 
-If you have never seen "Rain Man" (1988), then it probably isn't nearly as funny as I think it is.
+*(If you have never seen "Rain Man" (1988), then it probably isn't nearly as funny as I think it is.)*
 
 ***
 ## QUESTON: 2. Describe a TCP/IP packet in detail. Describe the header, how many bytes it is, and which components it contains. What data can come after the header?
