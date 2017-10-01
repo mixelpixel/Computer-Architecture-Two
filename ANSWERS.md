@@ -18,7 +18,7 @@ QUESTON: 1. The minimum seek time for an HDD is 9msec, and the maximum seek time
 
 `(25,600 * 9ms) + (25,600 * y-many nanoseconds)`
 
-> Soooo, an average case... welllllllll, it depends upon whether you mean the mean, median or mode average of seek time, the mean median or mode average of how fragmented the data is on the drive, the rotational speed of the drive (7,200rpm rated drives are fairly common, tho maybe 5,400 is average) and marginal considerations of rotational latency. Practically tho, if it takes more than 20 seconds to copy a 100MB file from one place on my HDD to another, then as of October 2017, it is time for an upgrade cuz on my lappy, copying 100MB from the SSD internal drive to an external SSD over USB3 is next to instantaneous.
+> Soooo, an average case... welllllllll, it depends upon whether you mean the mean, median or mode average of seek time, the mean median or mode average of how fragmented the data is on the drive, the rotational speed of the drive (7,200rpm rated drives are fairly common, tho maybe 5,400 is average) and marginal considerations of rotational latency and such. Practically tho, if it takes more than 20 seconds to copy a 100MB file from one place on my HDD to another, then as of October 2017, it is time for an upgrade cuz on my lappy, copying 100MB from the SSD internal drive to an external SSD over USB3 is next to instantaneous.
 
 > As you commented [in the lecture](https://youtu.be/_ivSbOPoJNk?=49m47s), the answer is resolutely:
 
