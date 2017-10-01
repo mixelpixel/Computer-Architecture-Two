@@ -41,11 +41,15 @@ This script requires the installation of the "log-update" npm package.
 ***
 ## QUESTON: 2. Describe a TCP/IP packet in detail. Describe the header, how many bytes it is, and which components it contains. What data can come after the header?
 
+
+
 ***
 ## QUESTON: 3. How does the network protocol guarantee that a TCP/IP packet is complete after transmission?
 
 ***
 ## QUESTON: 4. What is the difference between TCP and IP?
+
+Both the Tansmission Control (TCP) and Internet (IP) protocols are aspects of the Open Systems Interconnection model (OSI). Within this 7 layered model, TCP (along with UDP) is part of the fourth layer and IP is part of the third. When there are active processes on either end of a networked connection, Transmission Control Protocol normalizes the dialogging between the boundaries of pertinent processes on either end. Internet Protocol normalizes the dialogue between either device. Both protocols handle errors. Whereas the IP address is used to send "packets" to a particular IP address, the TCP port guarantees an unordered stream of packets will be organized according to the segment of data which is comprised of ordered packets.
 
 ***
 ## QUESTON: 5. Why is 3d performance so much higher with a graphics card than without? Modern CPUs are extremely fast, what is limiting their performance?
