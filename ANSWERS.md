@@ -46,7 +46,7 @@ Essentially the packet is the basic unit of information in a network trasnmissio
 ***
 ## QUESTON: 3. How does the network protocol guarantee that a TCP/IP packet is complete after transmission?
 
-By using a checksum. A checksum result is sent and compared to a checksum made upon the received and reassembled bits.
+Each packet sent requires an acknowledgement of reception from the receiving side. When all the packets are sent, received and acknowledges, a checksum comparison is verified. A checksum result is sent and compared to a checksum made upon the received and reassembled bits.
 
 ***
 ## QUESTON: 4. What is the difference between TCP and IP?
