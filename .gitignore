@@ -3,3 +3,6 @@
 .babelrc
 .eslintrc.js
 package-lock.json
+*~
+*.swp
+*.swo
