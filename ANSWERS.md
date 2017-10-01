@@ -47,9 +47,3 @@ QUESTON: 1. The minimum seek time for an HDD is 9msec, and the maximum seek time
 4. What is the difference between TCP and IP?
 
 5. Why is 3d performance so much higher with a graphics card than without? Modern CPUs are extremely fast, what is limiting their performance?
-
-
-cpu sends read request, time for request to be sent to HD controller
-HD controller wants to line up an optimal read path
-Is HD in stationary state? Is it spinning yet? Rotational latency
-benchmarks
