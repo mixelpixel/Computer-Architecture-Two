@@ -6,7 +6,7 @@ const logUpdate = require('log-update');
 /****************************************************************
 SCRIPT REQUIRES: `npm install log-update --save-dev`
 invoke: `$ node script [opt: dataSizeMB seekTime_ms blockSizeKB]`
-example `$ node HDDseek.js 5 9 4` <--- also DEFAULT arguments
+example `$ node HDDseek.js 5 9 4 100` <--- also DEFAULT arguments
 Computer Architecture TWO example: `$ node HDDseek.js 100 9 4`
 
 This simulation is contrained to EXCLUSIVELY emulating the
