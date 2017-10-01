@@ -38,7 +38,6 @@ QUESTON: 1. The minimum seek time for an HDD is 9msec, and the maximum seek time
 
 > If you have never seen "Rain Man" (1988), then it probably isn't nearly as funny as I think it is.
 
-
 ***
 2. Describe a TCP/IP packet in detail. Describe the header, how many bytes it is, and which components it contains. What data can come after the header?
 
