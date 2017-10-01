@@ -67,7 +67,7 @@ values increment, e.g.
 'use-strict';
 /* eslint no-console: 0 */
 const process = require('process'); // <~~~ Not needed, just making linter happy
-const logUpdate = require('log-update');
+const logUpdate = require('log-update'); // requires: npm install log-update --save-dev
 
 /****************************************************************
 SCRIPT REQUIRES: `npm install log-update --save-dev`
